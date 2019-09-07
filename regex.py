@@ -122,7 +122,3 @@ while not valid_pass(password):
     password = input()
 
 print('fine password')
-
-def strip_str(delete_space,delete_str):
-    if re.search(r'\d', delete_space):
-

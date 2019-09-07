@@ -19,7 +19,7 @@ def demort(v, n):
 a = 4039
 w = 6
 b = demort(a, w)
-print "demort(7, 6)=", b
+print("demort(7, 6)=", b)
 b = demort(a>>1, w)
-print "demort(7>>1, 6)=", b
+print("demort(7>>1, 6)=", b)
 

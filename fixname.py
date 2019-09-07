@@ -17,13 +17,13 @@ def rename(filename):
 #Use "batch_rename.py ." cannot get 1st argument '.'
 #But if changed to "C:\Python27\python files_batch_rename.py .", can got the '.', doesn't know why
 if len(sys.argv)<>2:
-    print "Usgae C:\Python27\Python %s <base_dir>" % (sys.argv[0], sys.argv[1])
+    print("Usgae C:\Python27\Python %s <base_dir>" % (sys.argv[0], sys.argv[1]))
     sys.exit(0)
 
 base_dir = sys.argv[1]
 recursive = False
 
-print "base_dir=[%s], recursive=[%s]" % (base_dir, str(recursive))
+print("base_dir=[%s], recursive=[%s]" % (base_dir, str(recursive)))
 
 for dirpath, subdirnames, filenames in os.walk(base_dir, topdown=True):
     os.chdir( dirpath )
@@ -32,8 +32,8 @@ for dirpath, subdirnames, filenames in os.walk(base_dir, topdown=True):
             for filename in filenames:
                 if filtered(dirpath, filename):
                     newfilename = rename(filename)
-                    print "rename %s to %s" % (filename, newfilename)
+                    print("rename %s to %s" % (filename, newfilename))
                     os.rename(filename, newfilename)
     else:
-        pass #TODO
+        pass
 
